@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Yahoo FF Waiver Priority Drag and Drop
-// @namespace
+// @namespace    https://github.com/itorrey/userscripts
 // @version      0.1
 // @description  Sort Yahoo waiver priority using DnD
 // @downloadURL  https://github.com/itorrey/userscripts/raw/master/waiverDnd/Yahoo%20FF%20Waiver%20Priority%20Drag%20and%20Drop.user.js
