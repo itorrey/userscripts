@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Yahoo FF Waiver Priority Drag and Drop
 // @namespace    https://github.com/itorrey/userscripts
-// @version      0.2
+// @version      0.3
 // @description  Sort Yahoo waiver priority using DnD
 // @downloadURL  https://github.com/itorrey/userscripts/raw/master/waiverDnd/Yahoo%20FF%20Waiver%20Priority%20Drag%20and%20Drop.user.js
 // @author       Torrey Rice
-// @match        http://football.fantasysports.yahoo.com/*
+// @match        http://football.fantasysports.yahoo.com/*/editwaivers
 // @grant        GM_addStyle
 // ==/UserScript==
 
@@ -15,25 +15,26 @@ GM_addStyle(".Table tbody tr { cursor: move; transition:background 0.4s;} .Table
 
 YUI().use('sortable', 'selector-css3', function (Y) {
 
-    var waiverNodes = Y.all('.Table tbody tr');
-     if(!waiverNodes._nodes.length) {
-		Y.one('.Table tbody').append(testData);
-     }
+  //Mainly for testing. If there's no waiver's already set, use the testData to populate the waiver list.
+  var waiverNodes = Y.all('.Table tbody tr');
+  if(!waiverNodes._nodes.length) {
+    Y.one('.Table tbody').append(testData);
+  }
 
-	var sortable = new Y.Sortable({
-		container: '.Table tbody',
-		nodes: 'tr',
-		opacity: '0'
-	});
+  var sortable = new Y.Sortable({
+    container: '.Table tbody',
+    nodes: 'tr',
+    opacity: '0'
+  });
 
-    sortable.delegate.after('drag:end', function (e) {
-        var selectNodes = Y.all('.Table tbody tr select');
-		var optionNodes = Y.all('.Table tbody tr select option[selected]').removeAttribute("selected");;
+  sortable.delegate.after('drag:end', function (e) {
+    var selectNodes = Y.all('.Table tbody tr select');
+    var optionNodes = Y.all('.Table tbody tr select option[selected]').removeAttribute("selected");;
 
-        selectNodes.each(function(node, index) {
-           var opt = node._node.children[index];
-           opt.setAttribute("selected", "true");
-           node.set("selectedIndex", index);
-        });
+    selectNodes.each(function(node, index) {
+      var opt = node._node.children[index];
+      opt.setAttribute("selected", "true");
+      node.set("selectedIndex", index);
     });
+  });
 });
