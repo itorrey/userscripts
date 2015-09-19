@@ -1,0 +1,95 @@
+@import variables;
+@import 'mfl2015';
+
+
+
+a:hover {
+    color: $hoverColor !important;
+    text-decoration: none !important;
+}
+
+
+body {
+    background: $pageBg;
+    background-size: cover;
+    color: $bodyTextColor;
+}
+
+.pageheader {
+    background: $pageHeader;
+}
+
+.pagebody {
+
+}
+
+#options_07 {
+
+}
+
+
+#championship_plaque {
+    display: none;
+}
+
+.playerImage {
+    display: block;
+    background-color:#fff;
+    background-size: cover;
+    border-radius: 30px;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+td.playerPosition {
+    width: 50px;
+
+    span {
+        background: #0078FE;
+        border-radius: 8px;
+        padding:10px;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    for $pos, $idx in $positionColors {
+        &.{$pos} span {
+            background: $idx;
+        }
+    }
+}
+
+
+td.img {
+    width: 70px;
+}
+
+.nextGame {
+ font-size: 0.8em;
+    margin:0;
+    padding:0;
+}
+
+.report {
+   background: rgba(#fff, 0.9);
+   border-collapse: collapse;
+   border-radius: 4px;
+   box-shadow: 0px 0px 24px 5px rgba(0,0,0,0.8);
+}
+
+.oddtablerow {
+  background: rgba(#fff, 0.0);
+  border: 0;
+}
+
+.eventablerow {
+    background: rgba(#fff, 0.8);
+    border: 0;
+}
+
+.oddtablerow, .eventablerow {
+    transition: background 0.3s;
+}

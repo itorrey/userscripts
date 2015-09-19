@@ -1,0 +1,1171 @@
+/*
+==========================================
+               MFL 2015
+ ---------------------------------------
+              SKIN COLORS
+ ---------------------------------------
+  $primaryColor - (RED)
+  $secondaryColor - (BLUE)
+  $altColor - (BROWN)
+==========================================
+*/
+
+
+/*   LAYOUT HTML - BODY - PAGEBODY - PAGEHEADER - PAGEFOOTER
+============================================================ */
+
+html {
+    height: 100%;
+    width: 100%;
+    padding:0;
+    margin:0;
+}
+body{
+    font-family: Verdana,Geneva,sans-serif;
+    font-size:13px;
+    background:#FFFFFF url(http://www20.myfantasyleague.com/skins/mfl2015/bodytop.jpg)repeat-x;
+    color:$altColor;
+    margin:0;
+}
+.pagebody {
+    padding:5px;
+    padding-bottom: 100px;
+    margin-bottom: -100px;
+    background:none;
+    padding-top:10px;
+    min-height:810px;
+    max-width:1160px;
+    margin:0 auto;
+}
+.pageheader {
+    max-width:1160px;
+    margin:0 auto;
+    position: relative;
+    background:url(http://www20.myfantasyleague.com/skins/mfl2015/top-shadow.png)no-repeat;
+    background-position:50% 34px;
+    color:#2b4066;
+    height:0px;
+    border-bottom:0;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    min-height:68px;
+}
+.pageheader a:link,.pageheader a:active,.pageheader a:visited {
+    color:$primaryColor;
+}
+.pageheader a:link:hover,.pageheader a:active:hover,.pageheader a:visited:hover {
+    color:#2b4066;
+}
+.brandlogo {
+    float:left;
+}
+.brandlogo a {
+    background:url(http://www20.myfantasyleague.com/skins/mfl2015/mfl_logo.png);
+    display:block;
+    background-repeat:no-repeat;
+    background-position:top center;
+    width:160px;
+    height:120px;
+    background-size: 160px 120px;
+    margin-top:33px;
+}
+.brandlogo img {
+    visibility:hidden;
+}
+.pagetitle {
+    position:absolute;
+    top:66px;
+    left:170px;
+    width:auto;
+    z-index:-1;
+}
+.pagetitle h1 {
+    text-align:left;
+    color:$altColor;
+    font-family: Oswald,arial,Georgia,serif;
+    font-size:28px;
+    font-weight:normal;
+    color: $secondaryColor;
+}
+.welcome {
+    position:absolute;
+    top:-3px;
+    right:5px;
+    width:auto;
+    display:table;
+    text-align:center;
+}
+.welcome b {
+    display:table-row;
+    text-transform:uppercase;
+    color:#fff;
+    font-weight:400;
+    line-height:36px;
+}
+.bannerimage {
+    float:left;
+    clear:left;
+    width:100%;
+    margin-top:-30px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.bannerimage img {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+img.leaguelogo {
+    max-width:100%;
+    margin-bottom:10px;
+}
+.pagefooter {
+    width: 100%;
+    height: 100px;
+    background:#2c2c2c;
+    padding-top:10px;
+    color:#ccc;
+    border-top:8px solid #e5e5e5;
+}
+.pagefooter a:link,.pagefooter a:active,.pagefooter a:visited {
+    color:#eee;
+    font-weight:400;
+}
+.pagefooter a:link:hover,.pagefooter a:active:hover,.pagefooter a:visited:hover {
+    color:#FFFFFF;
+    font-weight:400;
+}
+.pagefooter > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1) {
+    border-bottom:5px solid $primaryColor;
+}
+
+
+/*   MFL TOP MENU
+================= */
+
+div#menu0 {
+    top:4px !important;
+    border:0 none!important;
+    background:none;
+}
+.mainmenuoff, a.mainmenuoff:link, a.mainmenuoff:visited, a.mainmenuoff:hover, a.mainmenuoff:active, a.mainmenucurrent:link, a.mainmenucurrent:visited, a.mainmenucurrent:hover, a.mainmenucurrent:active {
+    color:#ccc;
+    text-decoration:none;
+    background:$altColor url(menu-table-bg.jpg);
+}
+div#menu0 #tbl0 .milonictable,div#menu0 #tbl0 .mainmenuoff {
+    background:none;
+}
+div#menu0 #tbl0 .milonictable {
+    margin-bottom:2px!important;
+}
+.mainmenucurrent {
+    background:$altColor url(menu-table-bg.jpg);
+    color:#FFFFFF!important;
+}
+div#menu0 #tbl0 .milonictable,div#menu0 #tbl0 .mainmenucurrent {
+    background:none;
+}
+.mainmenuon, A.mainmenuon:link, A.mainmenuon:visited, A.mainmenuon:hover, A.mainmenuon:active {
+    color:#FFFFFF;
+    background:$altColor url(menu-table-bg.jpg);
+    text-decoration: none;
+    text-indent:3px;
+}
+div#menu0 #tbl0 .milonictable,div#menu0 #tbl0 .mainmenuon {
+    background:none;
+}
+#menu0 .mainmenuon {
+    text-indent:0px;
+    padding-right:0px;
+}
+.mainmenuoff {
+    padding-right:3px;
+}
+#menu0 .mainmenuoff {
+    padding-right:0px;
+}
+.mmenucontainer {
+    border:none!important;
+    font-size:110%!important;
+}
+
+
+/*   HOMEPAGE MODULES - MESSAGE - TABS
+====================================== */
+
+.homepagetabcontent .report {
+    width:100%!important;
+}
+.homepagecolumn .homepagemodule {
+    width:100%;
+    margin-bottom:15px;
+}
+.homepagecolumn {
+    padding-right:5px;
+    padding-top:0;
+    border-right:1px solid #ddd;
+    padding-left:5px;
+}
+.homepagecolumn:first-child {
+    padding-left:0px;
+}
+.homepagecolumn:last-child {
+    padding-right:0px;
+    border-right:0;
+}
+.homepagemessage {
+    background:#fff;
+    border:1px dotted $altColor;
+    margin:0 auto;
+    padding:5px;
+    width:80%;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+.homepagemessage td {
+    padding:10px;
+}
+.homepagemessage span.warning,.homepagemessage h4.warning {
+    color:$primaryColor;
+}
+.homepagemessage a:link{
+    color:$linkColor!important;
+}
+.homepagemessage a:link:hover {
+    color:$linkColor!important;
+}
+#homepagetabs {
+    text-align:center;
+    color:#fff;
+    border-bottom:5px solid $primaryColor;
+    margin-bottom:8px;
+    background:#333;
+    height:40px;
+    padding:0!important;
+}
+#homepagetabsdiv #homepagetabs li {
+    text-transform:uppercase;
+    font-family: 'Oswald',sans-serif;
+    font-weight:400;
+    letter-spacing:1px;
+    color:#dddddd;
+    background:none;
+    margin:0;
+    height:36px;
+    line-height:36px;
+    border:0;
+    border-right:1px solid #222;
+    border-left:1px solid #383838;
+}
+#homepagetabsdiv #homepagetabs li:last-of-type {
+    border-right:none;
+}
+#homepagetabsdiv #homepagetabs li:hover {
+    z-index:0;
+    position:relative;
+    color:#FFFFFF;
+}
+#homepagetabsdiv #homepagetabs li.currenttab {
+    z-index:2!important;
+    position:relative;
+    color:#FFFFFF;
+    border-bottom:0;
+    background:$primaryColor;
+}
+#homepagetabsdiv #homepagetabs li:first-of-type.currenttab {
+    border-left:1px solid $primaryColor;
+}
+
+
+/*   CAPTIONS AND TH
+==================== */
+
+caption,.homepagemodule caption,.homepagecolumn .homepagemodule caption {
+    color:$bodyTextColor;
+    width:auto;
+    padding:0;
+    margin:0;
+    cursor:default;
+    text-transform:uppercase;
+    text-align:left;
+    background:none;
+    border-bottom:4px solid $bodyTextColor;
+    font-weight:normal;
+    font-family: Oswald,arial,Georgia,serif;
+    font-size:16px;
+}
+caption a:link,caption a:active,caption a:visited {
+    color:$linkColor!important;
+    text-decoration:none;
+}
+caption a img,th a img,h3 a img {
+    vertical-align:middle;
+}
+caption a:hover{
+    color:#000000!important;
+    text-decoration:none;
+}
+caption>span.module_expand {
+    color:$bodyTextColor;
+    position:absolute;
+    right:2px;
+    margin-top:-2px;
+    font-size:1em;
+    font-weight:900;
+}
+caption>span.module_expand:hover {
+    color:#000;
+}
+th {
+    color:#333;
+    font-style:normal;
+    font-size:100%;
+    font-weight:400;
+    text-align:center;
+    background:none;
+}
+th a:link,th a:active,th a:visited {
+    color:#000;
+    text-decoration:none;
+}
+th a:hover {
+    color:$secondaryColor;
+    text-decoration:none;
+}
+
+
+/*   PREVENT LINKS AND IMAGES FROM HAVING OUTLINES ON HOVER AND FOCUS
+===================================================================== */
+
+:-moz-any-link:focus,:focus,img {
+    outline:none;
+}
+
+
+/*   TABLE ROW - FONT COLORING
+============================== */
+
+.oddtablerow a:link,.oddtablerow a:active,.oddtablerow a:visited,.oddtablerow {
+    color:$linkColor;
+    text-decoration:none;
+    font-weight:300;
+    font-size:10pt;
+}
+.eventablerow a:link,.eventablerow a:active,.eventablerow a:visited,.eventablerow {
+    color:$linkColor;
+    text-decoration:none;
+    font-weight:300;
+    font-size:10pt;
+}
+.oddtablerow a:hover,.eventablerow a:hover {
+    color:#000;
+    text-decoration:underline;
+}
+.oddtablerow td,.eventablerow td {
+    padding:2px;
+    border-bottom:0;
+    font-weight:300;
+    font-size:10pt;
+    border-bottom:1px solid #f7f7f7;
+}
+.oddtablerow {
+    background:#FFF;
+    color:#333!important;
+}
+.eventablerow {
+    background:#FFF;
+    color:#333!important;
+}
+a:link,a:active,a:visited{
+    color:$secondaryColor;
+}
+.newposition td,.newposition th {
+    border-top:2px solid $secondaryColor;
+}
+.warning {
+    color:$primaryColor;
+    font-size:10pt;
+    font-weight:400;
+}
+th.warning {
+    color:$primaryColor;
+    font-weight:400;
+    font-size:10pt;
+}
+.oddtablerow td.status span.freeagent {
+    color:$primaryColor;
+}
+.eventablerow td.status span.freeagent {
+    color:$primaryColor;
+}
+a:hover {
+    color:$primaryColor;
+}
+A:link img,A:visited img {
+    border-color:transparent;
+}
+A:hover img {
+    border-color:transparent;
+}
+a:active {
+    background:none;
+}
+#body_options_08 tr.myfranchise,#body_top tr.myfranchise,
+#body_options_236 tr.myfranchise,#body_options_117 tr.myfranchise,
+#body_options_32 tr.myfranchise {
+    background:rgba(42,59,102,.2);
+}
+#body_options_08 tr.myfranchise td a:hover,#body_top tr.myfranchise td a:hover,
+#body_options_236 tr.myfranchise td a:hover,#body_options_117 tr.myfranchise td a:hover,
+#body_options_32 tr.myfranchise td a:hover {
+    color:#000;
+
+}
+h2 {
+    font-size:14px;
+    margin:0;
+    background:#fff;
+    color:$primaryColor;
+    font-weight:normal;
+    font-family: Oswald,arial,Georgia,serif;
+}
+h3 {
+    font-size:12pt;
+    color:$primaryColor;
+    background-color:none;
+    border:none;
+    padding:4px;
+    margin-bottom:6px;
+    margin-top:4px;
+    text-transform:uppercase;
+    font-weight:normal;
+    font-family: Oswald,arial,Georgia,serif;
+    font-size:14px;
+}
+h3 a:link,h3 a:visited,h3 a:active {
+    color:$secondaryColor;
+}
+h3 a:hover {
+    color:$primaryColor;
+}
+
+
+/*   SET WIDTHS AND SPACING FOR ALL TABLES AND REPORTS
+====================================================== */
+
+.playoffbracket,#home .playoffbracket,#monthly_calendar,#home #monthly_calendar,.pagebody table,#monthly_calendar,.report,td.two_column_layout table,table.two_column_layout,#player table,table#youtubevideo.homepagemodule.report embed,#body_board_show textarea {
+    width:100%;
+}
+table.two_column_layout {
+    padding:0!important;
+    border-spacing:0;
+}
+table.two_column_layout .two_column_layout  {
+    padding-right:5px;
+    padding-left:0;
+}
+    table.two_column_layout .two_column_layout:last-child  {
+    padding-right:0px;
+}
+table.report td.two_column_layout {
+    padding-right:5px;
+    padding-left:0;
+}
+table.report td.two_column_layout:last-child {
+    padding-right:0px;
+}
+div#options_31.pagebody table:last-child {
+    border-spacing:0;
+}
+div#options_31.pagebody table.report:last-child {
+    border-spacing:1px;
+}
+#options_12 #MSG {
+    width:98%;
+}
+#body_player .report {
+    width:99%;
+}
+#body_chat,#chat {
+    width:auto;
+}
+#live_scoring_summary table.report,#live_scoring table.report {
+    min-width:300px;
+}
+#live_scoring_summary .scoresummary {
+    width:50%;
+}
+table.scoresummary,table.h2hmatchups,table.report td.two_column_layout,table.two_column_layout .two_column_layout {
+    width:50%;
+}
+
+
+/*   TABLES AND REPORTS
+======================= */
+
+.report {
+    background:#fff;
+    border: 0;
+    padding: 0;
+    text-align: left;
+    border-bottom:1px solid #ddd;
+}
+#board_show td {
+    vertical-align:top;
+}
+#body_chat {
+    background:#fff;
+}
+#chat {
+    margin-bottom:0;
+    padding-bottom:0;
+    margin-top:0;
+}
+#body_chat h2 {
+    display:none;
+    margin-top:10px;
+    background:#fff;
+}
+table#youtubevideo.homepagemodule.report embed {
+    text-align:center;
+}
+#my_options li {
+    padding:2px;
+    font-size:10pt;
+}
+#league_chat {
+    margin-bottom:0px!important;
+}
+#league_chat b{
+    color:$primaryColor;
+}
+.plaque > h2:nth-child(1) {
+    color: #FFFFFF;
+    text-transform:uppercase;
+    font-size:16pt;
+}
+.plaque > div > h3:nth-child(1) {
+    color: $primaryColor!important;
+    text-transform:uppercase;
+    font-size:13pt;
+}
+#options_22 .scoresummary {
+    margin-bottom:10px;
+}
+div#depth_chart table  {
+    border-spacing:0!important;
+}
+#body_options_07 .report td {
+    text-align:center;
+}
+#body_options_07 .report td.player {
+    text-align:left;
+}
+textarea {
+    width:96%;
+    height:auto;
+    margin-left:13px;
+}
+#body_options_46 textarea {
+    width:80%;
+}
+form table {
+    width:90%;
+}
+#options_12 #MSG {
+    width:1000px;
+    margin-bottom:10px;
+    margin-left:10px;
+    background:#fff;
+    padding:0;
+    color:#000;
+}
+#commish_email textarea {
+    height:auto;
+    margin-left:13px;
+}
+#body_board_show textarea {
+    margin:0 auto;
+    height:auto;
+    margin-bottom:10px;
+    margin-left:-3px;
+}
+#body_board_show form {
+    padding:0 5px;
+}
+#body_board_show th.messageboardbar {
+    color:$primaryColor;
+    background:none;
+    font-size:14px;
+    font-weight:bold;
+    border:none;
+    padding-right:0;
+    text-decoration:underline;
+}
+#body_board_show th.messageboardbar a {
+    color:$primaryColor;
+}
+#body_board_show th.messageboardbar a:hover {
+    color:$secondaryColor;
+}
+#body_board_show .messageboardlink{
+    padding:24px;
+}
+
+
+
+/*   STANDINGS AND BRIEF STANDINGS
+================================== */
+
+#standings h3,.homepagecolumn #standings h3, .homepagecolumn #brief_standings h3,#brief_standings h3 {
+    color:#333;
+    border:1px solid #ddd;
+    text-transform:uppercase;
+    font-size:18pt;
+    margin-bottom:5px;
+    margin-top:6px;
+    letter-spacing:1px;
+    background:#eee;
+    font-family: Oswald,arial,Georgia,serif;
+}
+#division00 > h3:nth-child(1) {
+    margin-top:1px;
+}
+#standings td,#standings th,#brief_standings td,#brief_standings th {
+    text-align:center;
+}
+#brief_standings td.fname,#brief_standings th.fname,#standings td.fname,#standings th.fname,#standings td.ficonname,#standings td.ficon {
+    text-align:left;
+}
+
+
+/*   ARICLE IMG PLAYER IMG
+=========================== */
+
+table.articlepicturetable  {
+    width:auto;
+}
+img.articlepicture {
+    max-width:300px;
+}
+
+
+/*   BULLETIN BOARD PAGE
+======================== */
+
+#body_options_13 img.franchiselogo {
+    display:none;
+}
+#options_13 .franchiselogo {
+    display:none;
+}
+#body_options_13 h3 {
+    background:none;
+    border:none;
+}
+#body_options_13 form {
+    text-align:center;
+}
+
+
+/*   LVIE SCORING PAGES
+======================= */
+
+#body_live_scoring_summary h2,#body_live_scoring h2 {
+    border:3px solid $secondaryColor;
+    background:$secondaryColor;
+    color:#fff;
+    padding:15px 0;
+    text-transform:uppercase;
+    font-size:18pt;
+    margin-top:5px;
+}
+#live_scoring_summary .scoresummary {
+    margin-top:10px;
+    padding:0;
+    border:none!important;
+}
+#body_live_scoring_summary,#body_live_scoring {
+    background:none;
+}
+
+
+/*   PLAYOFFS TABLES
+==================== */
+
+.playoffbracket td {
+    border:0;
+}
+.playoffbracket {
+    padding: 3px;
+    background:none;
+    border:0;
+}
+.playoffbracket td.topteam {
+    border-bottom:2px solid $secondaryColor;
+}
+.playoffbracket td.bracket {
+    border-right:2px solid $secondaryColor;
+}
+.playoffbracket td.bottomteam {
+    border-bottom:2px solid $secondaryColor;
+    border-right:2px solid $secondaryColor;
+}
+.playoffbracket td b {
+    color:$primaryColor;
+}
+.playoffbracket td {
+    text-align:center;
+    font-size:11pt!important;
+}
+#home th.playoffbracketname {
+    text-transform:uppercase;
+    font-size:12pt;
+}
+
+
+/*   MONTLY CALENDAR
+==================== */
+
+#monthly_calendar {
+    padding:0px;
+    border-collapse:separate!important;
+    background:#FFFFFF;
+    border:0;
+    margin-bottom:13px;
+}
+#monthly_calendar td {
+    padding:0;
+    border:1px solid #ddd;
+}
+#monthly_calendar th {
+    border:1px solid #ddd;
+    color:$secondaryColor;
+}
+#monthly_calendar .month_header th {
+    background:#eee;
+}
+#monthly_calendar .month_header th a {
+    color:#333;
+}
+#monthly_calendar .day_of_week_header th {
+    background:#eee;
+}
+#monthly_calendar td .calendarday {
+    background-color:#ddd;
+    border-bottom:1px solid #aaaaaa;
+    border-left:1px solid #999999;
+    color:$altColor;
+    height:25px;
+    line-height:25px;
+}
+.calendarday {
+    width:40px;
+}
+.calendarday a {
+    color:$altColor!important;
+    font-size:10pt;
+    font-family: Verdana;
+}
+#monthly_calendar td.today {
+    border:4px double $primaryColor!important;
+}
+
+/*   FRANCHISE ICONS
+============================== */
+.franchiseicon {
+    max-width:400px;
+    max-height:100px;
+}
+caption.withfranchiseicon {
+    text-align:center;
+    text-indent:0;
+    padding:5px 0px;
+}
+caption.withfranchiseicon img {
+    max-width:400px;
+    max-height:100px;
+}
+#standings .franchiseicon {
+    max-width:400px;
+    max-height:100px;
+    display:block;
+    margin:2px 0;
+}
+#home #standings .franchiseicon {
+    max-width:400px;
+    max-height:100px;
+}
+#standings .franchiseicon {
+    display:inline-block;
+}
+#standings td a{
+    display:block;
+}
+#options_207 tr td .franchiseicon,#options_197 tr td .franchiseicon {
+    max-width:150px;
+    max-height:80px;
+}
+img.ava {
+    max-width:150px;
+    max-height:100px;
+}
+.playoffbracket .franchiseicon,#home .playoffbracket .franchiseicon {
+    padding:5px 0;
+    vertical-align:middle;
+    max-width:200px;
+    max-height:100px;
+}
+
+        /* REMOVE OWNERS NAME ON REPORTS WHEN LOGOS ARE BEING USED */
+           .withfranchiseicon span.ownername{display:none;}
+
+
+/*   MOBILE DEVICE ADJUSTMENTS
+============================== */
+
+        /* REMOVE BACKGROUND COLORS WHEN LINK CLICKED ON MOBILE DEVICES */
+           * {-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}
+
+        /* FORCE MOBILE SAFARI FOR IPHONE NOT TO ENLARGE BODY TEXT SIZE */
+           @media screen and (max-device-width: 480px){
+             body{
+               -webkit-text-size-adjust: none;
+             }
+           }
+
+
+/*   RESET CHAT BOX TO NOT BLOW OUT BOX WHEN LONG NO SPACE MESSAGES ARE TYPED
+============================================================================= */
+
+#league_chat td:nth-child(1) {
+    padding:0 5px;
+}
+#league_chat td:nth-child(2) {
+    padding:0 3px;
+}
+select,#chat_text_field {
+    color:$altColor;
+    font-weight:400;
+    margin:5px 0;
+}
+#league_chat input[type="button"] {
+    margin: 0px;
+}
+
+
+/*   REPLACE CHAT POPUP IMAGE
+============================= */
+
+#league_chat caption img[alt="New Window"] {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: transparent url(chaticon.png) no-repeat;
+    width: 30px; /* Width of new image */
+    height: 24px; /* Height of new image */
+    padding-left: 30px; /* Equal to width of new image */
+    border:none!important;
+    margin-top:-15px;
+}
+
+
+/*   INPUT BUTTONS
+================== */
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+    border: 0;
+    padding: 4px;
+    color: #FFFFFF;
+    margin: 2px;
+    cursor:pointer;
+    background:$primaryColor;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f05252), color-stop(1, #660000));
+    background:-moz-linear-gradient(top, #f05252 5%, #660000 100%);
+    background:-webkit-linear-gradient(top, #f05252 5%, #660000 100%);
+    background:-o-linear-gradient(top, #f05252 5%, #660000 100%);
+    background:-ms-linear-gradient(top, #f05252 5%, #660000 100%);
+    background:linear-gradient(to bottom, #f05252 5%, #660000 100%);
+    background-color:#f05252;
+    border:1px solid #cd2121;
+
+}
+input[type="button"]:hover, input[type="submit"]:hover {
+    color:#FFFFFF;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #666666), color-stop(1, #2c2c2c));
+    background:-moz-linear-gradient(top, #666666 5%, #2c2c2c 100%);
+    background:-webkit-linear-gradient(top, #666666 5%, #2c2c2c 100%);
+    background:-o-linear-gradient(top, #666666 5%, #2c2c2c 100%);
+    background:-ms-linear-gradient(top, #666666 5%, #2c2c2c 100%);
+    background:linear-gradient(to bottom, #666666 5%, #2c2c2c 100%);
+    background-color:#666666;
+    border:1px solid #2c2c2c;
+}
+input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, button::-moz-focus-inner,input[type="reset"]::-moz-focus-inner {
+    border:0;
+}
+input[type="submit"]:focus, input[type="button"]:focus, input[type="text"]:focus, input[type="reset"]:focus, button {
+    outline:none;
+}
+
+
+/*   VERTICAL MFL MENU
+====================== */
+
+#vsubmenu {
+    margin-left:0px;
+    padding:0px;
+}
+#withmenus.withleft {
+    margin-left:129px;
+    zoom: 1;
+}
+#vsubmenu{
+    margin-bottom:20px;
+}
+#vsubmenu ul {
+    width:110px;
+}
+#vsubmenu ul li {
+    text-align:center;
+    width:112px;
+    color:$secondaryColor;
+    text-transform:uppercase;
+    padding-top:6px;
+    padding-bottom:6px;
+    font-weight:400;
+    font-size:1.1em;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border:1px solid #ddd;
+    background:#fff;
+    font-family: Oswald,arial,Georgia,serif;
+}
+#vsubmenu ul li ul li {
+    width:117px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    margin-left:2px;
+    border:none;
+    background:#f7f7f7;
+}
+#vsubmenu ul li a {
+    padding:2px 0 2px 3px;
+    text-align:left;
+    width:112px;
+    font-size:8pt;
+    color:#333;
+    border:1px solid #fff;
+    text-transform:none;
+}
+#vsubmenu ul li a:hover {
+    text-indent:3px;
+    color:$secondaryColor;
+}
+.vsubmenuheader {
+    margin-top:10px!important;    font-family: Verdana,Geneva,sans-serif;
+}
+.vsubmenuheader a {
+    font-family: Verdana,Geneva,sans-serif;
+}
+li.vsubmenuheader:nth-child(1) {
+    margin-top:0px !important;
+}
+
+
+/*   HORIZONTAL MFL MENU
+======================== */
+
+#hsubmenu {
+    border:1px solid #ddd;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    float:none;
+    margin:0 auto;
+    width:100%;
+    margin-bottom:10px;
+    background: #fff;
+    padding:0;
+}
+#hsubmenu ul li {
+    display:table-cell;
+    width:1%;
+    float:none;
+    right:0%;
+    border-left:1px solid #ddd;
+    padding:3px 0;
+}
+#hsubmenu a {
+    color:$secondaryColor;
+    text-transform:uppercase;
+    font-weight:400;
+    font-family: Oswald,arial,Georgia,serif;
+}
+#hsubmenu a:hover,#hsubmenu ul li:hover a{
+    color:#000!important;
+}
+#hsubmenu ul {
+    float: none;
+    left:0%;
+}
+
+/*   MOBILE HORIZONTAL MENU CSS ADJUSTMENT
+=========================================== */
+@media only screen and (max-width: 1024px) {
+#hsubmenuitems > li:nth-child(5) , #hsubmenuitems > li:nth-child(10){
+    display:none;
+}
+}
+
+
+/*   COMMISSIONER PAGE
+====================== */
+
+#commissioner_setup table th {
+    background:#eee;
+    text-transform:uppercase;
+    font-size:13pt;
+    height:40px;
+    line-height:40px;
+    text-align:left;
+    text-indent:55px;
+    color:#333;
+    font-weight:normal;
+    font-family: Oswald,arial,Georgia,serif;
+    font-size:16px;
+}
+#commissioner_setup table li {
+    color:#333;
+}
+#commissioner_setup th {
+    height:40px;
+    line-height:40px;
+    text-align:left;
+    text-indent:45px;
+    color:$primaryColor;
+}
+#commissioner_setup th#recently_used {
+    background-image:url(recent.png);
+    background-repeat:no-repeat;
+    background-position:10px 4px;
+}
+#commissioner_setup th#general_setup {
+    background-image:url(setting_tools.png);
+    background-repeat:no-repeat;
+    background-position:10px 4px;
+}
+#commissioner_setup th#commissioner_franchise_setup {
+    background-image:url(commish_setup.png);
+    background-repeat:no-repeat;
+    background-position:10px 4px;
+}
+#commissioner_setup th#history_setup {
+    background-image: url(hourglass.png);
+    background-repeat:no-repeat;
+    background-position:10px 4px;
+}
+#commissioner_setup th#scoring_setup {
+    background-image:url(whistle.png);
+    background-repeat:no-repeat;
+    background-position:10px 4px;
+}
+#commissioner_setup th#players_and_rosters {
+    background-image:url(group.png);
+    background-repeat:no-repeat;
+    background-position:10px 4px;
+}
+#commissioner_setup th#adjust_scores {
+    background-image:url(numeric_stepper.png);
+    background-repeat:no-repeat;
+    background-position:10px 4px;
+}
+#commissioner_setup th#home_page_message_setup {
+    background-image:url(widgets.png);
+    background-repeat:no-repeat;
+    background-position:10px 4px;
+}
+#commissioner_setup th#salary_cap_setup {
+    background-image:url(chart_curve_edit.png);
+    background-repeat:no-repeat;
+    background-position:10px 4px;
+}
+#commissioner_setup th#use_with_caution {
+    background:$primaryColor;
+    background-image:url(error.png);
+    background-repeat:no-repeat;
+    background-position:10px 4px;
+    color:#ddd;
+}
+#commissioner_setup th#playoff_setup {
+    background-image:url(playoffs.png);
+    background-repeat:no-repeat;
+    background-position:10px 4px;
+}
+#commissioner_setup th#other_transactions_setup {
+    background-image:url(small_business.png);
+    background-repeat:no-repeat;
+    background-position:10px 4px;
+}
+#commissioner_setup th#waivers_setup {
+    background-image:url(arrow_refresh.png);
+    background-repeat:no-repeat;
+    background-position:10px 4px;
+}
+#commissioner_setup th#draft_setup {
+    background-image:url(events.png);
+    background-repeat:no-repeat;
+    background-position:10px 4px;
+}
+#commissioner_setup th#auction_setup {
+    background-image:url(auction_hammer_gavel.png);
+    background-repeat:no-repeat;
+    background-position:10px 4px;
+}
+#commissioner_setup th#fantasy_schedule_setup {
+    background-image:url(calendar_edit.png);
+    background-repeat:no-repeat;
+    background-position:10px 4px;
+}
+#commissioner_setup th#appearance_setup {
+    background-image:url(layout_edit.png);
+    background-repeat:no-repeat;
+    background-position:10px 4px;
+}
+
+
+/*  REMOVE ITEMS FROM LIVE SCORING PAGE WHEN LEAGUE NOT PAID FOR
+================================================================ */
+#body_live_scoring_summary div#menu0,
+#body_live_scoring_summary #hsubmenu,
+#body_live_scoring_summary #vsubmenu,
+#body_live_scoring_summary .pageheader {
+    display:none;
+}
+
+
+/*  CHANGE NAME OF MAIN TAB TO HOME
+=================================== */
+li#tab0 {
+    position: relative;
+}
+li#tab0:after {
+    content: "Home";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:#333;
+}
+li#tab0.currenttab:after {
+    background:$primaryColor;
+}
