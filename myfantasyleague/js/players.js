@@ -3,10 +3,10 @@
     var pageId = $('body')[0].id;
 
     var pagesToShow = ['','body_options_07', 'body_options_08'];
-    console.log(pagesToShow.indexOf(pageId));
 
     if(players.length && pagesToShow.indexOf(pageId) > 0) {
         showPlayerImages();
+        adjustRosterView();
 
         var report = $('.report tbody');
         if(report.length) {
@@ -64,5 +64,11 @@
     }
 
 
+    function adjustRosterView() {
+        var franchiseLogo = $('.franchiselogo');
+        $('.pagebody').prepend(franchiseLogo);
+
+        $('h3 + br').remove();
+    }
 
 }).call(this);

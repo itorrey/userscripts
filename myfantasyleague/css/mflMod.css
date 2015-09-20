@@ -38,7 +38,7 @@ body {
 .pageheader a:link,
 .pageheader a:active,
 .pageheader a:visited {
-  color: #0078fe;
+  color: #1890cb;
 }
 .pageheader a:link:hover,
 .pageheader a:active:hover,
@@ -129,9 +129,6 @@ img.leaguelogo {
 .pagefooter a:visited:hover {
   color: #fff;
   font-weight: 400;
-}
-.pagefooter > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1) {
-  border-bottom: 5px solid #0078fe;
 }
 div#menu0 {
   top: 4px !important;
@@ -228,18 +225,18 @@ div#menu0 #tbl0 .mainmenuon {
 }
 .homepagemessage span.warning,
 .homepagemessage h4.warning {
-  color: #0078fe;
+  color: #1890cb;
 }
 .homepagemessage a:link {
-  color: #0751d8 !important;
+  color: #1890cb !important;
 }
 .homepagemessage a:link:hover {
-  color: #0751d8 !important;
+  color: #1890cb !important;
 }
 #homepagetabs {
   text-align: center;
   color: #fff;
-  border-bottom: 5px solid #0078fe;
+  border-bottom: 5px solid #1890cb;
   margin-bottom: 8px;
   background: #333;
   height: 40px;
@@ -272,10 +269,10 @@ div#menu0 #tbl0 .mainmenuon {
   position: relative;
   color: #fff;
   border-bottom: 0;
-  background: #0078fe;
+  background: #1890cb;
 }
 #homepagetabsdiv #homepagetabs li:first-of-type.currenttab {
-  border-left: 1px solid #0078fe;
+  border-left: 1px solid #1890cb;
 }
 caption,
 .homepagemodule caption,
@@ -288,7 +285,7 @@ caption,
   text-transform: uppercase;
   text-align: left;
   background: none;
-  border-bottom: 4px solid #fff;
+  border-bottom: 4px solid #333;
   font-weight: normal;
   font-family: Oswald, arial, Georgia, serif;
   font-size: 16px;
@@ -296,7 +293,7 @@ caption,
 caption a:link,
 caption a:active,
 caption a:visited {
-  color: #0751d8 !important;
+  color: #1890cb !important;
   text-decoration: none;
 }
 caption a img,
@@ -305,7 +302,7 @@ h3 a img {
   vertical-align: middle;
 }
 caption a:hover {
-  color: #000 !important;
+  color: #28a7e6 !important;
   text-decoration: none;
 }
 caption>span.module_expand {
@@ -346,7 +343,7 @@ img {
 .oddtablerow a:active,
 .oddtablerow a:visited,
 .oddtablerow {
-  color: #0751d8;
+  color: #1890cb;
   text-decoration: none;
   font-weight: 300;
   font-size: 10pt;
@@ -355,7 +352,7 @@ img {
 .eventablerow a:active,
 .eventablerow a:visited,
 .eventablerow {
-  color: #0751d8;
+  color: #1890cb;
   text-decoration: none;
   font-weight: 300;
   font-size: 10pt;
@@ -391,23 +388,23 @@ a:visited {
   border-top: 2px solid #fff;
 }
 .warning {
-  color: #0078fe;
+  color: #f30059;
   font-size: 10pt;
   font-weight: 400;
 }
 th.warning {
-  color: #0078fe;
+  color: #f30059;
   font-weight: 400;
   font-size: 10pt;
 }
 .oddtablerow td.status span.freeagent {
-  color: #0078fe;
+  color: #00c05b;
 }
 .eventablerow td.status span.freeagent {
-  color: #0078fe;
+  color: #00c05b;
 }
 a:hover {
-  color: #0078fe;
+  color: #1890cb;
 }
 A:link img,
 A:visited img {
@@ -437,13 +434,13 @@ h2 {
   font-size: 14px;
   margin: 0;
   background: #fff;
-  color: #0078fe;
+  color: #1890cb;
   font-weight: normal;
   font-family: Oswald, arial, Georgia, serif;
 }
 h3 {
   font-size: 12pt;
-  color: #0078fe;
+  color: #1890cb;
   background-color: none;
   border: none;
   padding: 4px;
@@ -458,9 +455,10 @@ h3 a:link,
 h3 a:visited,
 h3 a:active {
   color: #fff;
+  text-decoration: none;
 }
 h3 a:hover {
-  color: #0078fe;
+  color: #1890cb;
 }
 .playoffbracket,
 #home .playoffbracket,
@@ -556,7 +554,7 @@ table#youtubevideo.homepagemodule.report embed {
   margin-bottom: 0px !important;
 }
 #league_chat b {
-  color: #0078fe;
+  color: #1890cb;
 }
 .plaque > h2:nth-child(1) {
   color: #fff;
@@ -564,7 +562,7 @@ table#youtubevideo.homepagemodule.report embed {
   font-size: 16pt;
 }
 .plaque > div > h3:nth-child(1) {
-  color: #0078fe !important;
+  color: #1890cb !important;
   text-transform: uppercase;
   font-size: 13pt;
 }
@@ -613,7 +611,7 @@ form table {
   padding: 0 5px;
 }
 #body_board_show th.messageboardbar {
-  color: #0078fe;
+  color: #1890cb;
   background: none;
   font-size: 14px;
   font-weight: bold;
@@ -622,7 +620,7 @@ form table {
   text-decoration: underline;
 }
 #body_board_show th.messageboardbar a {
-  color: #0078fe;
+  color: #1890cb;
 }
 #body_board_show th.messageboardbar a:hover {
   color: #fff;
@@ -718,7 +716,7 @@ img.articlepicture {
   border-right: 2px solid #fff;
 }
 .playoffbracket td b {
-  color: #0078fe;
+  color: #1890cb;
 }
 .playoffbracket td {
   text-align: center;
@@ -769,7 +767,7 @@ img.articlepicture {
   font-family: Verdana;
 }
 #monthly_calendar td.today {
-  border: 4px double #0078fe !important;
+  border: 4px double #1890cb !important;
 }
 .franchiseicon {
   max-width: 400px;
@@ -860,7 +858,7 @@ input[type="reset"] {
   color: #fff;
   margin: 2px;
   cursor: pointer;
-  background: #0078fe;
+  background: #1890cb;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -1021,7 +1019,7 @@ li.vsubmenuheader:nth-child(1) {
   line-height: 40px;
   text-align: left;
   text-indent: 45px;
-  color: #0078fe;
+  color: #1890cb;
 }
 #commissioner_setup th#recently_used {
   background-image: url("recent.png");
@@ -1069,7 +1067,7 @@ li.vsubmenuheader:nth-child(1) {
   background-position: 10px 4px;
 }
 #commissioner_setup th#use_with_caution {
-  background: #0078fe;
+  background: #1890cb;
   background-image: url("error.png");
   background-repeat: no-repeat;
   background-position: 10px 4px;
@@ -1129,24 +1127,45 @@ li#tab0:after {
   background: #333;
 }
 li#tab0.currenttab:after {
-  background: #0078fe;
+  background: #1890cb;
 }
-a:hover {
-  color: #1364f7 !important;
-  text-decoration: none !important;
-}
-body {
-  background: #000 url("images/pageBg4.jpg") no-repeat fixed 0 0;
-  background-size: cover;
-  color: #fff;
-}
-.pageheader {
-  background: #000;
-}
-#championship_plaque {
+#options_07 h2:first-of-type {
   display: none;
 }
-.playerImage {
+#options_07 .franchiselogo {
+  max-width: 300px;
+}
+#options_07 .reportnavigation {
+  text-align: right;
+  float: right;
+}
+#single_roster caption {
+  padding-bottom: 1.5em;
+}
+.report {
+  background: rgba(255,255,255,0.9);
+  border-collapse: collapse;
+}
+.report tr th {
+  background: #1890cb;
+  padding: 0.8em;
+}
+.report .oddtablerow {
+  background: rgba(255,255,255,0);
+  border: 0;
+}
+.report .eventablerow {
+  background: rgba(255,255,255,0.8);
+  border: 0;
+}
+.report .oddtablerow,
+.report .eventablerow {
+  transition: background 0.3s;
+}
+.report .newposition td {
+  border-top: 2px solid rgba(0,0,0,0.7);
+}
+.report .playerImage {
   display: block;
   background-color: #fff;
   background-size: cover;
@@ -1156,54 +1175,82 @@ body {
   margin: 0 auto;
   padding: 0;
 }
-td.playerPosition {
+.report td.playerPosition {
   width: 50px;
 }
-td.playerPosition span {
+.report td.playerPosition span {
   background: #0078fe;
   border-radius: 8px;
   padding: 10px;
   text-transform: uppercase;
   color: #fff;
 }
-td.playerPosition.qb span {
+.report td.playerPosition.qb span {
   background: #0078fe;
 }
-td.playerPosition.rb span {
+.report td.playerPosition.rb span {
   background: #3c5ca5;
 }
-td.playerPosition.wr span {
+.report td.playerPosition.wr span {
   background: #1a9fc7;
 }
-td.playerPosition.te span {
+.report td.playerPosition.te span {
   background: #0d6884;
 }
-td.playerPosition.pk span {
+.report td.playerPosition.pk span {
   background: #642b90;
 }
-td.img {
+.report td.img {
   width: 70px;
 }
-.nextGame {
+.report .nextGame {
   font-size: 0.8em;
   margin: 0;
   padding: 0;
 }
-.report {
-  background: rgba(255,255,255,0.9);
-  border-collapse: collapse;
+a:hover {
+  color: #28a7e6 !important;
+  text-decoration: none !important;
+}
+body {
+  background: #000 url("images/pageBg5.jpg") no-repeat fixed 0 0;
+  background-size: cover;
+  color: #333;
+}
+.pageheader {
+  background: transparent;
+  border-top: 50px solid rgba(8,31,42,0.8);
+  margin-bottom: 10px;
+  max-width: 100%;
+  padding: 2em 0;
+}
+.pageheader .welcome {
+  display: none;
+}
+.pageheader .brandlogo {
+  display: none;
+}
+.pageheader .pagetitle {
+  position: initial;
+  z-index: 1;
+}
+.pageheader .pagetitle h1 {
+  color: rgba(255,255,255,0.8);
+  font-size: 1.8em;
+  margin: 0 167px;
+  text-align: center;
+}
+.pagebody {
+  background: rgba(0,0,0,0.8);
   border-radius: 4px;
-  box-shadow: 0px 0px 24px 5px rgba(0,0,0,0.8);
+  color: #fff;
+  padding: 2em;
 }
-.oddtablerow {
-  background: rgba(255,255,255,0);
-  border: 0;
+#championship_plaque {
+  display: none;
 }
-.eventablerow {
-  background: rgba(255,255,255,0.8);
-  border: 0;
-}
-.oddtablerow,
-.eventablerow {
-  transition: background 0.3s;
+.pagefooter {
+  background: rgba(0,0,0,0.8);
+  border-top: 0;
+  margin-top: 3em;
 }
