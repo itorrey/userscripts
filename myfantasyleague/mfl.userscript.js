@@ -10,5 +10,6 @@
 // ==/UserScript==
 
 var currentStyle = $('#skin_stylesheet').remove();
-$('<link type="text/css" rel="stylesheet" href="http://userscripts.dev/myfantasyleague/css/mflMod.css"/>').appendTo(document.body);
+$('<link type="text/css" rel="stylesheet" id="position-sticky" href="http://userscripts.dev/myfantasyleague/css/glory_theme.css"/>').appendTo(document.head);
+$('<script src="http://userscripts.dev/myfantasyleague/js/stickyfix.js"></script>').appendTo(document.body);
 $('<script src="http://userscripts.dev/myfantasyleague/js/players.js"></script>').appendTo(document.body);

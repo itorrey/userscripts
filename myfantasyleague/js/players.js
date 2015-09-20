@@ -1,36 +1,65 @@
 (function() {
-    var players = $('a[class^="position"]');
-    var pageId = $('body')[0].id;
 
-    var pagesToShow = ['','body_options_07', 'body_options_08'];
-
-    if(players.length && pagesToShow.indexOf(pageId) > 0) {
-        showPlayerImages();
-        adjustRosterView();
-
-        var report = $('.report tbody');
-        if(report.length) {
-            report.each(function(idx, val) {
-                $(val.firstChild).prepend('<th>Pos</th><th></th>');
-            });
-        }
+    var pages = {
+        submitRoster: 'body_options_02',
+        roster: 'body_options_07',
+        freeAgents: 'body_free_agents'
     }
 
-    function showPlayerImages() {
+    var players = $('td.player a[class^="position"]');
+    var pageId = $('body')[0].id;
+
+    if(players.length) {
+        var playerTh = $('.report th.player');
+        var showPlayerImages = false;
+
+        switch(pageId) {
+            case pages.freeAgents:
+                    break;
+
+            case pages.roster:
+                 adjustRosterView();
+                 var showPlayerImages = true;
+                 break;
+        }
+
+        updatePlayerRows(playerTh, showPlayerImages);
+    }
+
+    if(pageId == 'body_free_agents') {
+        adjustFreeAgentsView();
+    }
+
+
+    makeSticky('.reportform');
+    $('.sticky').Stickyfill();
+
+
+    function updatePlayerRows(playerTh, showPlayerImages) {
+
+        // Add Pos to header for player position heading
+        $('<th>Pos</th>').insertBefore(playerTh);
+
+        if(showPlayerImages) {
+            $('<th></th>').insertBefore(playerTh);
+        }
+
         players.each(function(idx, val) {
             var playerId = getPlayerId(val.href);
             var playerPosition = getPlayerPosition(val.className);
-            var img = getPlayerImage(playerId);
             var nextGame = getPlayerNextGame(val.title);
-
-            //Add Player Image
-            $(val.parentNode.parentNode).prepend('<td class="img"><span class="playerImage" style="background-image:url(\''+img+'\')"></span></td>');
 
             //Add Player Next Game Info
             $(val.parentNode).append('<p class="nextGame">'+nextGame+'</p>');
 
             //Add Player Position
-            $(val.parentNode.parentNode).prepend('<td class="playerPosition '+playerPosition+'"><span>'+playerPosition+'</span></td>');
+            $('<td class="playerPosition '+playerPosition+'"><span>'+playerPosition+'</span></td>').insertBefore(val.parentNode);
+
+            if(showPlayerImages) {
+                var img = getPlayerImage(playerId);
+                 //Add Player Image
+                $('<td class="img"><span class="playerImage" style="background-image:url(\''+img+'\')"></span></td>').insertBefore(val.parentNode);               
+            }
         });
     }
 
@@ -59,7 +88,6 @@
 
     function getPlayerNextGame(gameStr) {
         var str = gameStr.split(":");
-
         return str[1]+str[2];
     }
 
@@ -67,8 +95,14 @@
     function adjustRosterView() {
         var franchiseLogo = $('.franchiselogo');
         $('.pagebody').prepend(franchiseLogo);
-
         $('h3 + br').remove();
+    }
+
+    function makeSticky(elmClass) {
+        var elm = $(elmClass);
+        if(elm.length) {
+            elm.addClass('sticky');
+        }
     }
 
 }).call(this);

@@ -3,19 +3,56 @@
    border-collapse: collapse;
    box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.3);
 
-  tr th {
-    background: $reportTHBg;
-    color: $reportTHTextColor;
-    padding: 0.8em;
-  }
+    tr {
+      th {
+         background: $reportTHBg;
+         color: $reportTHTextColor;
+         padding: 0.8em;
+         text-align: left;
 
-  .oddtablerow {
-    background: rgba(#fff, 0.0);
-    border: 0;
-  }
+         a {
+            &:link {
+               color: $reportTHLink;
+            }
+         }
+      }
+      
+      td {
+         padding: 0.8em;
+         transition: background 0.3s;
+         
+         &.week {
+            text-align: left;
+         }
+      }
+        
+      &.oddtablerow {
+         background: $reportRowBackgroundOdd;
+         border: 0;
+      }
 
-  .eventablerow {
-      background: rgba(#fff, 0.8);
-      border: 0;
-  }
+      &.eventablerow {
+         background: $reportRowBackgroundEven;
+         border: 0;
+      }
+     
+      &:hover {
+         td {
+            background: $reportRowBackgroundHover;
+         }
+      }
+   }
+}
+
+
+
+.reportform {
+   background: $reportFormBg;
+   padding: 1em;
+   top: 0px;
+   transition: background 0.3s;
+   
+   &:hover {
+      background: $reportFormHover;
+   }
 }
