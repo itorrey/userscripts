@@ -1,5 +1,6 @@
 @import variables;
 @import 'mfl2015';
+@import 'views/reports';
 @import 'views/roster';
 @import 'views/playersList';
 
@@ -44,10 +45,14 @@ body {
 }
 
 .pagebody {
-    background: $pageBodyBg;
+    //background: $pageBodyBg;
     border-radius: 4px;
     color: $pageTextColor;
-    padding: 2em;
+    padding: 0em;
+    
+    h2:first-of-type {
+        display: none;
+    }
 }
 
 

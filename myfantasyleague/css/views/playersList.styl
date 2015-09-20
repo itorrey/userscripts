@@ -1,65 +1,40 @@
 
 .report {
-   background: rgba(#fff, 0.9);
-   border-collapse: collapse;
-
-
-    tr th {
-      background: $primaryColor;
-      padding: 0.8em;
-    }
-
-  .oddtablerow {
-    background: rgba(#fff, 0.0);
-    border: 0;
-  }
-
-  .eventablerow {
-      background: rgba(#fff, 0.8);
-      border: 0;
-  }
-
-  .oddtablerow, .eventablerow {
-      transition: background 0.3s;
-  }
 
   .newposition {
-      td {
-          border-top: 2px solid rgba(#000, 0.7);
-      }
-
+    td {
+        border-top: 2px solid rgba(#000, 0.7);
+    }
   }
 
   .playerImage {
-      display: block;
-      background-color:#fff;
-      background-size: cover;
-      border-radius: 30px;
-      width: 50px;
-      height: 50px;
-      margin: 0 auto;
-      padding: 0;
+    display: block;
+    background-color:#fff;
+    background-size: cover;
+    border-radius: 30px;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0;
   }
-
 
   td.playerPosition {
-      width: 50px;
+    width: 50px;
 
-      span {
-          background: #0078FE;
-          border-radius: 8px;
-          padding:10px;
-          text-transform: uppercase;
-          color: #fff;
-      }
+    span {
+        background: #0078FE;
+        border-radius: 8px;
+        padding:10px;
+        text-transform: uppercase;
+        color: #fff;
+    }
 
-      for $pos, $idx in $positionColors {
-          &.{$pos} span {
-              background: $idx;
-          }
-      }
+    for $pos, $idx in $positionColors {
+        &.{$pos} span {
+            background: $idx;
+        }
+    }
   }
-
 
   td.img {
       width: 70px;

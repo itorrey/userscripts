@@ -1129,25 +1129,14 @@ li#tab0:after {
 li#tab0.currenttab:after {
   background: #1890cb;
 }
-#options_07 h2:first-of-type {
-  display: none;
-}
-#options_07 .franchiselogo {
-  max-width: 300px;
-}
-#options_07 .reportnavigation {
-  text-align: right;
-  float: right;
-}
-#single_roster caption {
-  padding-bottom: 1.5em;
-}
 .report {
   background: rgba(255,255,255,0.9);
   border-collapse: collapse;
+  box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.3);
 }
 .report tr th {
-  background: #1890cb;
+  background: #0c4866;
+  color: #fff;
   padding: 0.8em;
 }
 .report .oddtablerow {
@@ -1158,9 +1147,15 @@ li#tab0.currenttab:after {
   background: rgba(255,255,255,0.8);
   border: 0;
 }
-.report .oddtablerow,
-.report .eventablerow {
-  transition: background 0.3s;
+#options_07 .franchiselogo {
+  max-width: 300px;
+}
+#options_07 .reportnavigation {
+  text-align: right;
+  float: right;
+}
+#single_roster caption {
+  padding-bottom: 1.5em;
 }
 .report .newposition td {
   border-top: 2px solid rgba(0,0,0,0.7);
@@ -1241,10 +1236,12 @@ body {
   text-align: center;
 }
 .pagebody {
-  background: rgba(0,0,0,0.8);
   border-radius: 4px;
   color: #fff;
-  padding: 2em;
+  padding: 0em;
+}
+.pagebody h2:first-of-type {
+  display: none;
 }
 #championship_plaque {
   display: none;
