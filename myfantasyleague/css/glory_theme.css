@@ -285,7 +285,6 @@ caption,
   text-transform: uppercase;
   text-align: left;
   background: none;
-  border-bottom: 4px solid #333;
   font-weight: normal;
   font-family: Oswald, arial, Georgia, serif;
   font-size: 16px;
@@ -681,7 +680,7 @@ img.articlepicture {
 #body_live_scoring_summary h2,
 #body_live_scoring h2 {
   border: 3px solid #fff;
-  background: #fff;
+  background: rgba(8,31,42,0.8);
   color: #fff;
   padding: 15px 0;
   text-transform: uppercase;
@@ -692,10 +691,6 @@ img.articlepicture {
   margin-top: 10px;
   padding: 0;
   border: none !important;
-}
-#body_live_scoring_summary,
-#body_live_scoring {
-  background: none;
 }
 .playoffbracket td {
   border: 0;
@@ -1129,6 +1124,70 @@ li#tab0:after {
 li#tab0.currenttab:after {
   background: #1890cb;
 }
+a {
+  transition: color 0.3s;
+}
+a:hover {
+  color: #1892ce !important;
+  text-decoration: none !important;
+}
+body {
+  background: #000 url("images/pageBg5.jpg") no-repeat fixed 0 0;
+  background-size: cover;
+  color: #333;
+}
+.pageheader {
+  background: transparent;
+  border-top: 50px solid rgba(8,31,42,0.8);
+  margin-bottom: 10px;
+  max-width: 100%;
+  padding: 2em 0;
+}
+.pageheader .welcome {
+  display: none;
+}
+.pageheader .brandlogo {
+  display: none;
+}
+.pageheader .pagetitle {
+  position: initial;
+  z-index: 1;
+}
+.pageheader .pagetitle h1 {
+  color: rgba(255,255,255,0.8);
+  font-size: 1.8em;
+  margin: 0 167px;
+  text-align: center;
+}
+.pagebody {
+  border-radius: 4px;
+  color: #fff;
+  padding: 0em;
+}
+.pagebody h2:first-of-type {
+  display: none;
+}
+#championship_plaque {
+  display: none;
+}
+.pagefooter {
+  background: rgba(0,0,0,0.8);
+  border-top: 0;
+  margin-top: 3em;
+}
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  background: #0078fe;
+  border: 0;
+  transition: background 0.3s;
+}
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background: #258cff;
+  border: 0;
+}
 .report {
   background: rgba(255,255,255,0.9);
   border-collapse: collapse;
@@ -1226,67 +1285,10 @@ li#tab0.currenttab:after {
   margin: 0;
   padding: 0;
 }
-a {
-  transition: color 0.3s;
-}
-a:hover {
-  color: #1892ce !important;
-  text-decoration: none !important;
-}
-body {
-  background: #000 url("images/pageBg5.jpg") no-repeat fixed 0 0;
-  background-size: cover;
-  color: #333;
-}
-.pageheader {
-  background: transparent;
-  border-top: 50px solid rgba(8,31,42,0.8);
-  margin-bottom: 10px;
-  max-width: 100%;
-  padding: 2em 0;
-}
-.pageheader .welcome {
-  display: none;
-}
-.pageheader .brandlogo {
-  display: none;
-}
-.pageheader .pagetitle {
-  position: initial;
-  z-index: 1;
-}
-.pageheader .pagetitle h1 {
-  color: rgba(255,255,255,0.8);
-  font-size: 1.8em;
-  margin: 0 167px;
-  text-align: center;
-}
-.pagebody {
-  border-radius: 4px;
-  color: #fff;
-  padding: 0em;
-}
-.pagebody h2:first-of-type {
-  display: none;
-}
-#championship_plaque {
-  display: none;
-}
-.pagefooter {
-  background: rgba(0,0,0,0.8);
-  border-top: 0;
-  margin-top: 3em;
-}
-input[type="button"],
-input[type="submit"],
-input[type="reset"] {
-  background: #0078fe;
+#body_live_scoring h2 {
+  background: rgba(8,31,42,0.8);
   border: 0;
-  transition: background 0.3s;
 }
-input[type="button"]:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover {
-  background: #258cff;
-  border: 0;
+#body_live_scoring .reportform + div + table {
+  margin-top: 2em;
 }

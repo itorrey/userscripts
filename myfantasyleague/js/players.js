@@ -3,7 +3,8 @@
     var pages = {
         submitRoster: 'body_options_02',
         roster: 'body_options_07',
-        freeAgents: 'body_free_agents'
+        freeAgents: 'body_free_agents',
+        scoreboard: 'body_live_scoring'
     }
 
     var players = $('td.player a[class^="position"]');
@@ -12,7 +13,6 @@
     if(players.length) {
         var playerTh = $('.report th.player');
         var showPlayerImages = false;
-
         switch(pageId) {
             case pages.freeAgents:
                     break;
@@ -26,7 +26,11 @@
         updatePlayerRows(playerTh, showPlayerImages);
     }
 
-    if(pageId == 'body_free_agents') {
+    if(pageId == pages.scoreboard) {
+        createScoreboard();
+    }
+
+    if(pageId == pages.freeAgents) {
         adjustFreeAgentsView();
     }
 
@@ -103,6 +107,31 @@
         if(elm.length) {
             elm.addClass('sticky');
         }
+    }
+
+
+    //TODO Move this out to its own file
+    function createScoreboard() {
+        var teamNames = $('table td table.report caption span');
+        var teamPoints = $('table td table.report .grand_total .points b');
+        
+        var team1 = {
+            name: teamNames[0].textContent,
+            points: teamPoints[0].textContent
+        }
+
+        var team2 = {
+            name: teamNames[1].textContent,
+            points: teamPoints[1].textContent
+        }
+
+        var scoreboard = '<table class="scoreboard"><tbody><tr>';
+        scoreboard += '<td><h3>'+team1.name+'</h3><h4>'+team1.points+'</h4></td>';
+        scoreboard += '<td><h3>'+team2.name+'</h3><h4>'+team2.points+'</h4></td>';
+        scoreboard += '</tr></tbody></table>';
+
+        $(scoreboard).appendTo($('.reportform'));
+        
     }
 
 }).call(this);
