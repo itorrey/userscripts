@@ -1292,3 +1292,9 @@ input[type="reset"]:hover {
 #body_live_scoring .reportform + div + table {
   margin-top: 2em;
 }
+#body_live_scoring .reportform {
+  background: rgba(8,31,42,0.95);
+}
+#body_live_scoring .grand_total td {
+  background: #0c4866;
+}

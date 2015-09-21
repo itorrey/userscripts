@@ -62,7 +62,7 @@
             if(showPlayerImages) {
                 var img = getPlayerImage(playerId);
                  //Add Player Image
-                $('<td class="img"><span class="playerImage" style="background-image:url(\''+img+'\')"></span></td>').insertBefore(val.parentNode);               
+                $('<td class="img"><span class="playerImage" style="background-image:url(\''+img+'\')"></span></td>').insertBefore(val.parentNode);
             }
         });
     }
@@ -114,7 +114,23 @@
     function createScoreboard() {
         var teamNames = $('table td table.report caption span');
         var teamPoints = $('table td table.report .grand_total .points b');
-        
+        var allTeams = $('.reportform option');
+
+        allTeams.each(function(idx, val) {
+            var teams = val.textContent.split('at');
+
+            var parenStart = teams[0].indexOf('(');
+            var parenEnd = teams[0].indexOf(')');
+
+            var teamName = teams[0].substring(0, parenStart);
+            var teamScore = teams[0].substring(parenStart+1, parenEnd);
+            console.log(teamName, teamScore);
+
+            //var teams[0].replace(')', '')
+            //var team1 = teams[0].split('(');
+            //console.log(team1);
+        });
+
         var team1 = {
             name: teamNames[0].textContent,
             points: teamPoints[0].textContent
@@ -131,7 +147,7 @@
         scoreboard += '</tr></tbody></table>';
 
         $(scoreboard).appendTo($('.reportform'));
-        
+
     }
 
 }).call(this);
