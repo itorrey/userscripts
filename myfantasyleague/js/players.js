@@ -10,6 +10,8 @@
     var players = $('td.player a[class^="position"]');
     var pageId = $('body')[0].id;
 
+
+
     if(players.length) {
         var playerTh = $('.report th.player');
         var showPlayerImages = false;
@@ -126,9 +128,10 @@
             var teamScore = teams[0].substring(parenStart+1, parenEnd);
             console.log(teamName, teamScore);
 
-            //var teams[0].replace(')', '')
-            //var team1 = teams[0].split('(');
-            //console.log(team1);
+            var movies = {
+                "name": "Robert",
+            };
+
         });
 
         var team1 = {
