@@ -1,7 +1,7 @@
 .report {
    background: rgba(#fff, 0.9);
    border-collapse: collapse;
-   box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.3);
+   box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.3);
 
     tr {
       th {
@@ -16,16 +16,16 @@
             }
          }
       }
-      
+
       td {
          padding: 0.8em;
          transition: background 0.3s;
-         
+
          &.week {
             text-align: left;
          }
       }
-        
+
       &.oddtablerow {
          background: $reportRowBackgroundOdd;
          border: 0;
@@ -35,7 +35,7 @@
          background: $reportRowBackgroundEven;
          border: 0;
       }
-     
+
       &:hover {
          td {
             background: $reportRowBackgroundHover;
@@ -50,7 +50,7 @@
    padding: 1em;
    top: 0px;
    transition: background 0.3s;
-   
+
    &:hover {
       background: $reportFormHover;
    }

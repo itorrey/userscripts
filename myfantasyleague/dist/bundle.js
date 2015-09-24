@@ -45,10 +45,11 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	__webpack_require__(4);
 	__webpack_require__(5);
-	var tpl = __webpack_require__(6);
-	console.log(tpl({noun: "World"}));
+	__webpack_require__(6);
+	__webpack_require__(7);
+	//var tpl = require("./templates/template.ejs");
+	//console.log(tpl({noun: "World"}));
 
 /***/ },
 /* 1 */
@@ -9281,7 +9282,8 @@
 
 
 /***/ },
-/* 4 */
+/* 4 */,
+/* 5 */
 /***/ function(module, exports) {
 
 	(function(doc, win) {
@@ -9758,7 +9760,7 @@
 	}
 
 /***/ },
-/* 5 */
+/* 6 */
 /***/ function(module, exports) {
 
 	(function() {
@@ -9919,46 +9921,53 @@
 	}).call(this);
 
 /***/ },
-/* 6 */
+/* 7 */
 /***/ function(module, exports) {
 
-	module.exports = function anonymous(locals, escape, include, rethrow) {
-	    rethrow = rethrow || function rethrow(err, str, filename, lineno) {
-	        var lines = str.split("\n"), start = Math.max(lineno - 3, 0), end = Math.min(lines.length, lineno + 3);
-	        var context = lines.slice(start, end).map(function(line, i) {
-	            var curr = i + start + 1;
-	            return (curr == lineno ? " >> " : "    ") + curr + "| " + line;
-	        }).join("\n");
-	        err.path = filename;
-	        err.message = (filename || "ejs") + ":" + lineno + "\n" + context + "\n\n" + err.message;
-	        throw err;
-	    };
-	    escape = escape || function(markup) {
-	        return markup == undefined ? "" : String(markup).replace(_MATCH_HTML, encode_char);
-	    };
-	    var _ENCODE_HTML_RULES = {
-	        "&": "&amp;",
-	        "<": "&lt;",
-	        ">": "&gt;",
-	        '"': "&#34;",
-	        "'": "&#39;"
-	    }, _MATCH_HTML = /[&<>'"]/g;
-	    function encode_char(c) {
-	        return _ENCODE_HTML_RULES[c] || c;
-	    }
-	    var __line = 1, __lines = "Hello, <%=noun%>!", __filename = "template.ejs";
-	    try {
-	        var __output = [], __append = __output.push.bind(__output);
-	        with (locals || {}) {
-	            __append("Hello, ");
-	            __append(escape(noun));
-	            __append("!");
-	        }
-	        return __output.join("");
-	    } catch (e) {
-	        rethrow(e, __lines, __filename, __line);
-	    }
-	}
+	(function() {
+
+		 var pageId = $('body')[0].id;
+
+		 if(pageId != 'body_options_02') {
+		 	return;
+		 }
+
+		 var checkboxes;
+		 var selected;
+		 var selectedNode;
+		 var allowed;
+		 var allowedNode;
+
+		 function init() {
+		 	createTotalsBoard();
+		 	checkboxes = $('.report input[type^="checkbox"]');
+		 	updateCount();
+
+			checkboxes.change(function(elm, action) {
+			 	updateCount();
+			});
+		 }
+
+		 //var players = $('.report input[type^="checkbox"]').parent();
+		 //var selected = $('.report input[type^="checkbox"]:checked');
+
+
+		 function updateCount() {
+		 	selected = $('.report input[type^="checkbox"]:checked').length;
+		 	selectedNode.text(selected);
+		 }
+
+
+		 function createTotalsBoard() {
+		 	var board = '<div class="totalsBoard"><span id="selectedPlayers"></span><span id="allowedPlayers"></span></div>';
+		 	$(board).appendTo(document.body);
+		 	selectedNode = $('#selectedPlayers');
+		 	allowedNode = $('#allowedPlayers');
+		 }
+
+		init();
+
+	}).call(this);
 
 /***/ }
 /******/ ]);
