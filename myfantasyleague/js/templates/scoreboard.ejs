@@ -1,0 +1,16 @@
+<table>
+	<tbody>
+		<tr>
+			<% for(var i=0; i<gameData.length; i++) {%>
+				<td>
+					<%= gameData[i].team1.name %>
+					<%= gameData[i].team1.score %>
+				</td>
+				<td>
+					<%= gameData[i].team2.name %>
+					<%= gameData[i].team2.score %>
+				</td>
+			<% } %>
+		</tr>
+	</tbody>
+</table>

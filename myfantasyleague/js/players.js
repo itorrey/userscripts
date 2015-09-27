@@ -114,42 +114,7 @@
 
     //TODO Move this out to its own file
     function createScoreboard() {
-        var teamNames = $('table td table.report caption span');
-        var teamPoints = $('table td table.report .grand_total .points b');
-        var allTeams = $('.reportform option');
 
-        allTeams.each(function(idx, val) {
-            var teams = val.textContent.split('at');
-
-            var parenStart = teams[0].indexOf('(');
-            var parenEnd = teams[0].indexOf(')');
-
-            var teamName = teams[0].substring(0, parenStart);
-            var teamScore = teams[0].substring(parenStart+1, parenEnd);
-            console.log(teamName, teamScore);
-
-            var movies = {
-                "name": "Robert",
-            };
-
-        });
-
-        var team1 = {
-            name: teamNames[0].textContent,
-            points: teamPoints[0].textContent
-        }
-
-        var team2 = {
-            name: teamNames[1].textContent,
-            points: teamPoints[1].textContent
-        }
-
-        var scoreboard = '<table class="scoreboard"><tbody><tr>';
-        scoreboard += '<td><h3>'+team1.name+'</h3><h4>'+team1.points+'</h4></td>';
-        scoreboard += '<td><h3>'+team2.name+'</h3><h4>'+team2.points+'</h4></td>';
-        scoreboard += '</tr></tbody></table>';
-
-        $(scoreboard).appendTo($('.reportform'));
 
     }
 

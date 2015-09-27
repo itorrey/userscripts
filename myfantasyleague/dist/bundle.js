@@ -47,10 +47,14 @@
 	__webpack_require__(1);
 	__webpack_require__(4);
 	__webpack_require__(5);
-	var lineup = __webpack_require__(6);
-	var mfl = __webpack_require__(7);
 
-	var myMfl = new mfl('21502');
+	var glory = {
+		lineup: __webpack_require__(6),
+		scoreboard: __webpack_require__(7),
+		api: __webpack_require__(8)
+	};
+
+	glory.scoreboard.init();
 
 	/*var test = myMfl.request('projectedScores',{
 		leagueid: '21502',
@@ -9893,42 +9897,7 @@
 
 	    //TODO Move this out to its own file
 	    function createScoreboard() {
-	        var teamNames = $('table td table.report caption span');
-	        var teamPoints = $('table td table.report .grand_total .points b');
-	        var allTeams = $('.reportform option');
 
-	        allTeams.each(function(idx, val) {
-	            var teams = val.textContent.split('at');
-
-	            var parenStart = teams[0].indexOf('(');
-	            var parenEnd = teams[0].indexOf(')');
-
-	            var teamName = teams[0].substring(0, parenStart);
-	            var teamScore = teams[0].substring(parenStart+1, parenEnd);
-	            console.log(teamName, teamScore);
-
-	            var movies = {
-	                "name": "Robert",
-	            };
-
-	        });
-
-	        var team1 = {
-	            name: teamNames[0].textContent,
-	            points: teamPoints[0].textContent
-	        }
-
-	        var team2 = {
-	            name: teamNames[1].textContent,
-	            points: teamPoints[1].textContent
-	        }
-
-	        var scoreboard = '<table class="scoreboard"><tbody><tr>';
-	        scoreboard += '<td><h3>'+team1.name+'</h3><h4>'+team1.points+'</h4></td>';
-	        scoreboard += '<td><h3>'+team2.name+'</h3><h4>'+team2.points+'</h4></td>';
-	        scoreboard += '</tr></tbody></table>';
-
-	        $(scoreboard).appendTo($('.reportform'));
 
 	    }
 
@@ -9975,7 +9944,53 @@
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(8);
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
+	        var template = __webpack_require__(11);
+	        var scoreboard = {
+
+		 		init:function(){
+	                var teamNames = $('table td table.report caption span');
+	                var teamPoints = $('table td table.report .grand_total .points b');
+	                var games = $('.reportform option');
+	                var gameData = [];
+
+	                games.each(function(idx, val) {
+	                    var teams = val.textContent.split('at');
+
+	                    gameData[idx] = {
+	                        team1: scoreboard.getTeamInfo(teams[0]),
+
+	                        team2: scoreboard.getTeamInfo(teams[1])
+	                    }
+	                });
+
+	                var scores = template({gameData});
+
+	                //$(scores).appendTo($('.reportform'));
+	                console.log(scores);
+
+		 		},
+
+	            getTeamInfo:function(teamStr) {
+	                var parenStart = teamStr.indexOf('(');
+	                var parenEnd = teamStr.indexOf(')');
+	                var teamData = {
+	                    name: teamStr.substring(0, parenStart),
+	                    score: teamStr.substring(parenStart+1, parenEnd)
+	                };
+
+	                return teamData;
+	            }
+	        }
+
+	        return scoreboard;
+	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var _ = __webpack_require__(9);
 
 	    settings = {
 	        host: 'football20.myfantasyleague.com/',
@@ -10110,7 +10125,7 @@
 	module.exports = MFL;
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global) {/**
@@ -22465,10 +22480,10 @@
 	  }
 	}.call(this));
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)(module), (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module), (function() { return this; }())))
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -22482,6 +22497,60 @@
 		return module;
 	}
 
+
+/***/ },
+/* 11 */
+/***/ function(module, exports) {
+
+	module.exports = function anonymous(locals, escape, include, rethrow) {
+	    rethrow = rethrow || function rethrow(err, str, filename, lineno) {
+	        var lines = str.split("\n"), start = Math.max(lineno - 3, 0), end = Math.min(lines.length, lineno + 3);
+	        var context = lines.slice(start, end).map(function(line, i) {
+	            var curr = i + start + 1;
+	            return (curr == lineno ? " >> " : "    ") + curr + "| " + line;
+	        }).join("\n");
+	        err.path = filename;
+	        err.message = (filename || "ejs") + ":" + lineno + "\n" + context + "\n\n" + err.message;
+	        throw err;
+	    };
+	    escape = escape || function(markup) {
+	        return markup == undefined ? "" : String(markup).replace(_MATCH_HTML, encode_char);
+	    };
+	    var _ENCODE_HTML_RULES = {
+	        "&": "&amp;",
+	        "<": "&lt;",
+	        ">": "&gt;",
+	        '"': "&#34;",
+	        "'": "&#39;"
+	    }, _MATCH_HTML = /[&<>'"]/g;
+	    function encode_char(c) {
+	        return _ENCODE_HTML_RULES[c] || c;
+	    }
+	    var __line = 1, __lines = 'module.exports = function anonymous(locals, escape, include, rethrow) {\n    rethrow = rethrow || function rethrow(err, str, filename, lineno) {\n        var lines = str.split("\\n"), start = Math.max(lineno - 3, 0), end = Math.min(lines.length, lineno + 3);\n        var context = lines.slice(start, end).map(function(line, i) {\n            var curr = i + start + 1;\n            return (curr == lineno ? " >> " : "    ") + curr + "| " + line;\n        }).join("\\n");\n        err.path = filename;\n        err.message = (filename || "ejs") + ":" + lineno + "\\n" + context + "\\n\\n" + err.message;\n        throw err;\n    };\n    escape = escape || function(markup) {\n        return markup == undefined ? "" : String(markup).replace(_MATCH_HTML, encode_char);\n    };\n    var _ENCODE_HTML_RULES = {\n        "&": "&amp;",\n        "<": "&lt;",\n        ">": "&gt;",\n        \'"\': "&#34;",\n        "\'": "&#39;"\n    }, _MATCH_HTML = /[&<>\'"]/g;\n    function encode_char(c) {\n        return _ENCODE_HTML_RULES[c] || c;\n    }\n    var __line = 1, __lines = "<table>\\n	<tbody>\\n		<tr>\\n			<% for(var i=0; i<gameData.length; i++) {%>\\n				<td>\\n					<%= gameData[i].team1.name %>\\n					<%= gameData[i].team1.score %>\\n				</td>\\n				<td>\\n					<%= gameData[i].team2.name %>\\n					<%= gameData[i].team2.score %>\\n				</td>\\n			<% } %>\\n		</tr>\\n	</tbody>\\n</table>", __filename = "scoreboard.ejs";\n    try {\n        var __output = [], __append = __output.push.bind(__output);\n        with (locals || {}) {\n            __append("<table>\\n	<tbody>\\n		<tr>\\n			");\n            __line = 4;\n            for (var i = 0; i < gameData.length; i++) {\n                __append("\\n				<td>\\n					");\n                __line = 6;\n                __append(escape(gameData[i].team1.name));\n                __append("\\n					");\n                __line = 7;\n                __append(escape(gameData[i].team1.score));\n                __append("\\n				</td>\\n				<td>\\n					");\n                __line = 10;\n                __append(escape(gameData[i].team2.name));\n                __append("\\n					");\n                __line = 11;\n                __append(escape(gameData[i].team2.score));\n                __append("\\n				</td>\\n			");\n                __line = 13;\n            }\n            __append("\\n		</tr>\\n	</tbody>\\n</table>");\n            __line = 16;\n        }\n        return __output.join("");\n    } catch (e) {\n        rethrow(e, __lines, __filename, __line);\n    }\n}', __filename = "scoreboard.ejs";
+	    try {
+	        var __output = [], __append = __output.push.bind(__output);
+	        with (locals || {}) {
+	            __append('module.exports = function anonymous(locals, escape, include, rethrow) {\n    rethrow = rethrow || function rethrow(err, str, filename, lineno) {\n        var lines = str.split("\\n"), start = Math.max(lineno - 3, 0), end = Math.min(lines.length, lineno + 3);\n        var context = lines.slice(start, end).map(function(line, i) {\n            var curr = i + start + 1;\n            return (curr == lineno ? " >> " : "    ") + curr + "| " + line;\n        }).join("\\n");\n        err.path = filename;\n        err.message = (filename || "ejs") + ":" + lineno + "\\n" + context + "\\n\\n" + err.message;\n        throw err;\n    };\n    escape = escape || function(markup) {\n        return markup == undefined ? "" : String(markup).replace(_MATCH_HTML, encode_char);\n    };\n    var _ENCODE_HTML_RULES = {\n        "&": "&amp;",\n        "<": "&lt;",\n        ">": "&gt;",\n        \'"\': "&#34;",\n        "\'": "&#39;"\n    }, _MATCH_HTML = /[&<>\'"]/g;\n    function encode_char(c) {\n        return _ENCODE_HTML_RULES[c] || c;\n    }\n    var __line = 1, __lines = "<table>\\n	<tbody>\\n		<tr>\\n			');
+	            __line = 25;
+	            for (var i = 0; i < gameData.length; i++) {
+	                __append("\\n				<td>\\n					");
+	                __append(escape(gameData[i].team1.name));
+	                __append("\\n					");
+	                __append(escape(gameData[i].team1.score));
+	                __append("\\n				</td>\\n				<td>\\n					");
+	                __append(escape(gameData[i].team2.name));
+	                __append("\\n					");
+	                __append(escape(gameData[i].team2.score));
+	                __append("\\n				</td>\\n			");
+	            }
+	            __append('\\n		</tr>\\n	</tbody>\\n</table>", __filename = "scoreboard.ejs";\n    try {\n        var __output = [], __append = __output.push.bind(__output);\n        with (locals || {}) {\n            __append("<table>\\n	<tbody>\\n		<tr>\\n			");\n            __line = 4;\n            for (var i = 0; i < gameData.length; i++) {\n                __append("\\n				<td>\\n					");\n                __line = 6;\n                __append(escape(gameData[i].team1.name));\n                __append("\\n					");\n                __line = 7;\n                __append(escape(gameData[i].team1.score));\n                __append("\\n				</td>\\n				<td>\\n					");\n                __line = 10;\n                __append(escape(gameData[i].team2.name));\n                __append("\\n					");\n                __line = 11;\n                __append(escape(gameData[i].team2.score));\n                __append("\\n				</td>\\n			");\n                __line = 13;\n            }\n            __append("\\n		</tr>\\n	</tbody>\\n</table>");\n            __line = 16;\n        }\n        return __output.join("");\n    } catch (e) {\n        rethrow(e, __lines, __filename, __line);\n    }\n}');
+	            __line = 54;
+	        }
+	        return __output.join("");
+	    } catch (e) {
+	        rethrow(e, __lines, __filename, __line);
+	    }
+	}
 
 /***/ }
 /******/ ]);

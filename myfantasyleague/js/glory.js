@@ -1,10 +1,14 @@
 require('expose?$!expose?jQuery!jquery');
 require('./stickyfix');
 require('./players');
-var lineup = require('./lineup');
-var mfl = require('../node_modules/mfl-api');
 
-var myMfl = new mfl('21502');
+var glory = {
+	lineup: require('./lineup'),
+	scoreboard: require('./scoreboard'),
+	api: require('../node_modules/mfl-api')
+};
+
+glory.scoreboard.init();
 
 /*var test = myMfl.request('projectedScores',{
 	leagueid: '21502',
