@@ -10,5 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "expose-loader": "^0.7.0"
+  },
+  "devDependencies": {
+    "ejs-compiled-loader": "^2.0.2",
+    "http-server": "^0.8.5"
   }
 }

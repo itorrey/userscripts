@@ -1,44 +1,36 @@
-(function() {
+define('lineup', 
+    [], 
+    // module definition function
+    // dependencies (foo and bar) are mapped to function parameters
+    function () {
+        // return a value that defines the module export
+        // (i.e the functionality we want to expose for consumption)
+        var checkboxes;
+ 		var selected;
+ 		var selectedNode;
+ 		var allowed;
+ 		var allowedNode;
+    
+        // create your module here
+        var lineup = {
+        	
+	 		init:function(){
+	 			
+	 			//createTotalsBoard();
+	 			checkboxes = $('.report input[type^="checkbox"]');
+	 			this.updateCount();
 
-	 var pageId = $('body')[0].id;
+				checkboxes.change(function(elm, action) {
+		 			lineup.updateCount();
+				});
+	 		},
 
-	 if(pageId != 'body_options_02') {
-	 	return;
-	 }
-
-	 var checkboxes;
-	 var selected;
-	 var selectedNode;
-	 var allowed;
-	 var allowedNode;
-
-	 function init() {
-	 	createTotalsBoard();
-	 	checkboxes = $('.report input[type^="checkbox"]');
-	 	updateCount();
-
-		checkboxes.change(function(elm, action) {
-		 	updateCount();
-		});
-	 }
-
-	 //var players = $('.report input[type^="checkbox"]').parent();
-	 //var selected = $('.report input[type^="checkbox"]:checked');
-
-
-	 function updateCount() {
-	 	selected = $('.report input[type^="checkbox"]:checked').length;
-	 	selectedNode.text(selected);
-	 }
-
-
-	 function createTotalsBoard() {
-	 	var board = '<div class="totalsBoard"><span id="selectedPlayers"></span><span id="allowedPlayers"></span></div>';
-	 	$(board).appendTo(document.body);
-	 	selectedNode = $('#selectedPlayers');
-	 	allowedNode = $('#allowedPlayers');
-	 }
-
-	init();
-
-}).call(this);
+            updateCount:function(){
+                selected = $('.report input[type^="checkbox"]:checked').length;
+	 			//selectedNode.text(selected);
+	 			console.log(selected);
+            }
+        }
+ 
+        return lineup;
+});
