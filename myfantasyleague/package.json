@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "ejs-compiled-loader": "^2.0.2",
-    "http-server": "^0.8.5"
+    "http-server": "^0.8.5",
+    "lodash": "^3.10.1"
   }
 }

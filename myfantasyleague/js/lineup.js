@@ -1,5 +1,5 @@
-define('lineup', 
-    [], 
+define('lineup',
+    [],
     // module definition function
     // dependencies (foo and bar) are mapped to function parameters
     function () {
@@ -10,12 +10,12 @@ define('lineup',
  		var selectedNode;
  		var allowed;
  		var allowedNode;
-    
+
         // create your module here
         var lineup = {
-        	
+
 	 		init:function(){
-	 			
+
 	 			//createTotalsBoard();
 	 			checkboxes = $('.report input[type^="checkbox"]');
 	 			this.updateCount();
@@ -31,6 +31,6 @@ define('lineup',
 	 			console.log(selected);
             }
         }
- 
+
         return lineup;
 });

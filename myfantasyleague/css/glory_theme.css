@@ -146,7 +146,7 @@ a.mainmenucurrent:hover,
 a.mainmenucurrent:active {
   color: #ccc;
   text-decoration: none;
-  background: #333 url("menu-table-bg.jpg");
+  background: #081f2a;
 }
 div#menu0 #tbl0 .milonictable,
 div#menu0 #tbl0 .mainmenuoff {
@@ -156,7 +156,7 @@ div#menu0 #tbl0 .milonictable {
   margin-bottom: 2px !important;
 }
 .mainmenucurrent {
-  background: #333 url("menu-table-bg.jpg");
+  background: #081f2a;
   color: #fff !important;
 }
 div#menu0 #tbl0 .milonictable,
@@ -169,7 +169,7 @@ A.mainmenuon:visited,
 A.mainmenuon:hover,
 A.mainmenuon:active {
   color: #fff;
-  background: #333 url("menu-table-bg.jpg");
+  background: #081f2a;
   text-decoration: none;
   text-indent: 3px;
 }
